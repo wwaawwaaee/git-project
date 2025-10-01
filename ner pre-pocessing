@@ -1,0 +1,46 @@
+input_file = "D:/vscode project/medium示例.txt"  
+output_file = "D:/vscode project/medium示例2.txt"  
+
+with open(input_file, 'r') as f_in, open(output_file, 'w') as f_out:
+    for line in f_in:
+        
+        columns = line.split()
+        
+        if len(columns) > 6:
+            new_line = ' '.join(columns[6:])
+        else:
+            new_line = ''  
+        
+        f_out.write(new_line + '\n')  
+# f = open(r'medium示例.txt', 'r', encoding='utf8')
+# content = f.read()   # 读取全部文件内容
+# #print(content)
+# f.close()
+# if "]" in content or "[" in content:
+#     content = content.replace("]",")").replace("[","(")
+# # (round(eval(content),2))
+
+# linelist = content.splitlines()
+# kong=[]
+# txet=[]
+# i=0
+# for line in linelist:
+#     i+=1
+#     if line==' ':
+#         #print(i)#检查行中的空行
+#         kong.append("空")
+#         #continue
+#     #print(line)
+#     else:
+#         kong.append(line)
+# for appendText in kong:
+#     if appendText=='空':
+#         print("空")
+#     else:
+#         i+=1
+#         txet1=appendText.split(' ')[0]
+#         txet2=appendText.split(' ')[1]
+#         txet=appendText.split(' ')[2]
+#         print(txet2)
+#     with open(r'medium示例.txt','a') as f:
+#       f.write(f'{txet}\n')
